@@ -1,0 +1,26 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+
+/*
+	HaveItFast Systems
+	HaveItFast | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (HaveItFast/license)
+*/
+
+/* Page */
+
+	body {
+		overflow-x: scroll;
+	}
+
+/* Wrapper */
+
+	#wrapper {
+		body.is-preload & {
+			@include vendor('transform', 'none');
+			opacity: 1;
+		}
+	}
